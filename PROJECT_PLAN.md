@@ -150,3 +150,54 @@ Pakistan mein every bazaar mein dozens of mobile shops hain. Inhe chahiye:
 - **PTA Device registration** module add karo (very relevant after PTA DIRBS)
 - Spare parts inventory = second business opportunity (sell to repair technicians)
 - Target: Hafeez Center Lahore, Hall Road, mobile shops Facebook groups
+
+---
+
+## 🔐 Final Phase: Security & Licensing System (Launch Se Pehle Lazim)
+
+> **Is phase ko complete kiye baghair software sell nahi karna!**
+
+### Kya Implement Karna Hai:
+
+#### Step 1 — PC ID Generation (PHP)
+- [ ] Python helper script se Windows `MachineGuid` read karo → SHA256
+  ```
+  Registry: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography → MachineGuid
+  ```
+- [ ] Fallback: MAC + hostname → SHA256
+
+#### Step 2 — Trial System (Server-Side)
+- [ ] 15-day trial server pe register
+- [ ] File delete se reset nahi hoga
+- [ ] "Trial — X days remaining" dikhao
+
+#### Step 3 — License Activation
+- [ ] `XXXX-XXXX-XXXX-XXXX` format key
+- [ ] `POST /api/activate` → `{key, pc_id}`
+- [ ] Encrypted local file mein save
+
+#### Step 4 — Startup Validation
+- [ ] PC ID verify every startup
+- [ ] Har 3 din online check
+- [ ] 7-din offline grace
+
+#### Step 5 — Deactivation + 3-Day Lock
+- [ ] Settings → "Deactivate License"
+- [ ] 3-din lock after deactivation
+
+#### Step 6 — Code Protection
+- [ ] PHP IonCube obfuscation
+- [ ] License module alag protected file
+
+#### Step 7 — Admin License Panel
+- [ ] Key generate, assign, revoke
+
+### Phase Table:
+| Phase | Tasks | Status |
+|-------|-------|--------|
+| Phase 8 | PC ID + Trial (server-side) | 🔴 Not Started |
+| Phase 8 | License activation | 🔴 Not Started |
+| Phase 8 | Startup validation | 🔴 Not Started |
+| Phase 8 | Deactivation + lock | 🔴 Not Started |
+| Phase 8 | Admin panel | 🔴 Not Started |
+| Phase 8 | IonCube + final build | 🔴 Not Started |
