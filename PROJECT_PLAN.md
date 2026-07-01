@@ -1,4 +1,4 @@
-# 📱 MobileShop — Mobile Phone Shop Management System
+# 📱 CellNex — Mobile Shop POS & Repair Management System
 **Project Status:** 🟡 In Progress  
 **Priority:** ⭐⭐⭐ Medium-High  
 **Target Market:** Mobile phone shops, repair shops, accessories dealers in Pakistan  
